@@ -1,0 +1,24 @@
+package com.mydubbo.dubbo.Controller;
+
+
+import com.alibaba.dubbo.config.annotation.Reference;
+import com.mydubbo.dubbo.Service.RedisMessageSenderService;
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.ResponseBody;
+
+//定时器
+@Controller
+public class SendMessage {
+    @Reference
+    RedisMessageSenderService redisMessageSenderService;
+    /**
+     * 向redis消息队列index通道发布消息
+     */
+    @ResponseBody
+    @RequestMapping("/sendMsg")
+    public String sendSubMessage() throws Exception {
+        System.out.println("开始远程调用");
+        return redisMessageSenderService.sendSubMessage();
+    }
+}

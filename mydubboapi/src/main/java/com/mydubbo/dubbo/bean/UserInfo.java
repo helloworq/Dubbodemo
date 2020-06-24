@@ -2,6 +2,8 @@ package com.mydubbo.dubbo.bean;
 
 import lombok.Data;
 import org.hibernate.annotations.GenericGenerator;
+import org.springframework.cache.annotation.CacheEvict;
+
 import javax.persistence.*;
 import java.io.Serializable;
 

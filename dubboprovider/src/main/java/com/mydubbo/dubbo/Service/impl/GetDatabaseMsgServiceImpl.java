@@ -5,6 +5,8 @@ import com.mydubbo.dubbo.Service.GetDatabaseMsgService;
 import com.mydubbo.dubbo.Service.dao.UserRepositry;
 import com.mydubbo.dubbo.bean.UserInfo;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.PageRequest;
+import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Component;
 
 import java.util.List;
@@ -14,12 +16,27 @@ import java.util.List;
 public class GetDatabaseMsgServiceImpl implements GetDatabaseMsgService {
     String nameString="赵钱孙李周吴郑王冯陈褚卫";
     Integer nameLength=4;
+    int pageOffset=5;//定义分页偏移量
     @Autowired
     UserRepositry userRepositry;
     @Override
     public List<UserInfo> getMsgByEmail(String Email) {
-        System.out.println("进入。。。");
+        System.out.println("进入请求1");
         return userRepositry.findByEmail(Email);
+    }
+
+    /**
+     * 分页查询数据，PageRequest.of传入的第一个参数就可以完成分页功能，
+     * 不需要乘pageOffset
+     * @param Email
+     * @param currentPage
+     * @return
+     */
+    @Override
+    public List<UserInfo> getPageableMsgByEmail(String Email, int currentPage) {
+        System.out.println("进入请求2");
+        PageRequest pageable=PageRequest.of(currentPage,pageOffset);
+        return userRepositry.findByEmail(Email,pageable);
     }
 
     @Override
@@ -42,4 +59,5 @@ public class GetDatabaseMsgServiceImpl implements GetDatabaseMsgService {
             this.userRepositry.save(userInfo);
         }
     }
+
 }

@@ -9,7 +9,6 @@ import org.springframework.stereotype.Component;
 public class SayhelloServiceImpl implements SayhelloService {
     @Override
     public String printMsg(String info) {
-        System.out.println("hello"+info);
         return "hello"+info;
     }
 }

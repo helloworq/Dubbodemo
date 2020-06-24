@@ -1,7 +1,45 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="8cdb1f51-2fa5-49f1-aa4c-bd577cc21659" name="Default Changelist" comment="" />
+    <list default="true" id="8cdb1f51-2fa5-49f1-aa4c-bd577cc21659" name="Default Changelist" comment="新增redis订阅发布功能">
+      <change afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__commons_pool_commons_pool_1_6.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_lettuce_lettuce_core_5_3_1_RELEASE.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_netty_netty_buffer_4_1_50_Final.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_netty_netty_codec_4_1_50_Final.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_netty_netty_common_4_1_50_Final.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_netty_netty_handler_4_1_50_Final.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_netty_netty_resolver_4_1_50_Final.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_netty_netty_transport_4_1_50_Final.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_projectreactor_reactor_core_3_3_6_RELEASE.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_directory_studio_org_apache_commons_pool_1_6.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_logging_log4j_log4j_core_2_13_3.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_logging_log4j_log4j_jul_2_13_3.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_logging_log4j_log4j_slf4j_impl_2_13_3.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_platform_junit_platform_launcher_1_6_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_reactivestreams_reactive_streams_1_0_3.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_data_redis_2_3_1_RELEASE.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_log4j2_2_3_1_RELEASE.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_data_spring_data_keyvalue_2_3_1_RELEASE.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_data_spring_data_redis_2_3_1_RELEASE.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_context_support_5_2_7_RELEASE.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_oxm_5_2_7_RELEASE.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dubboconsumer/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/dubboconsumer/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dubboconsumer/src/main/java/com/mydubbo/dubbo/Controller/getTestInfo.java" beforeDir="false" afterPath="$PROJECT_DIR$/dubboconsumer/src/main/java/com/mydubbo/dubbo/Controller/getTestInfo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dubboconsumer/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/dubboconsumer/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dubboprovider/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/dubboprovider/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dubboprovider/src/main/java/com/mydubbo/dubbo/DubboproviderApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/dubboprovider/src/main/java/com/mydubbo/dubbo/DubboproviderApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dubboprovider/src/main/java/com/mydubbo/dubbo/Service/dao/UserRepositry.java" beforeDir="false" afterPath="$PROJECT_DIR$/dubboprovider/src/main/java/com/mydubbo/dubbo/Service/dao/UserRepositry.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dubboprovider/src/main/java/com/mydubbo/dubbo/Service/impl/GetDatabaseMsgServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/dubboprovider/src/main/java/com/mydubbo/dubbo/Service/impl/GetDatabaseMsgServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dubboprovider/src/main/java/com/mydubbo/dubbo/Service/impl/SayhelloServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/dubboprovider/src/main/java/com/mydubbo/dubbo/Service/impl/SayhelloServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dubboprovider/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/dubboprovider/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dubboprovider/src/test/java/com/mydubbo/dubbo/DubboproviderApplicationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/dubboprovider/src/test/java/com/mydubbo/dubbo/DubboproviderApplicationTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mydubboapi/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/mydubboapi/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mydubboapi/src/main/java/com/mydubbo/dubbo/Service/GetDatabaseMsgService.java" beforeDir="false" afterPath="$PROJECT_DIR$/mydubboapi/src/main/java/com/mydubbo/dubbo/Service/GetDatabaseMsgService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mydubboapi/src/main/java/com/mydubbo/dubbo/bean/UserInfo.java" beforeDir="false" afterPath="$PROJECT_DIR$/mydubboapi/src/main/java/com/mydubbo/dubbo/bean/UserInfo.java" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -47,6 +85,9 @@
       </list>
     </option>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="MavenImportPreferences">
     <option name="generalSettings">
       <MavenGeneralSettings>
@@ -64,12 +105,14 @@
     <option name="jreName" value="1.8" />
   </component>
   <component name="ProjectId" id="1cqx7wX7HL5Fqqn80zvn8tFeuSb" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="PropertiesComponent">
     <property name="DatabaseDriversLRU" value="mysql" />
     <property name="RequestMappingsPanelOrder0" value="0" />
     <property name="RequestMappingsPanelOrder1" value="1" />
     <property name="RequestMappingsPanelWidth0" value="75" />
     <property name="RequestMappingsPanelWidth1" value="75" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="jdk.selected.JAVA_MODULE" value="1.8" />
@@ -88,15 +131,209 @@
       <recent name="C:\Users\12733\Desktop\dubbo学习记录\dubbotest" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
-      <recent name="com.mydubbo.dubbo.Controller" />
       <recent name="com.mydubbo.dubbo.Service.impl" />
+      <recent name="com.mydubbo.dubbo.Config" />
+      <recent name="com.mydubbo.dubbo.Controller" />
       <recent name="com.example.mydubbo.bean" />
       <recent name="com.example.mydubbo.dubboprovider" />
-      <recent name="com.example.mydubbo.Service" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\12733\Desktop\dubbo学习记录\dubbotest\dubboprovider\src\main\resources" />
     </key>
+  </component>
+  <component name="RestClientSettings">
+    <option name="REQUEST_HISTORY">
+      <list>
+        <RestClientRequest>
+          <option name="httpMethod" value="GET" />
+          <option name="urlBase" value="http://www.baidu.com" />
+          <option name="urlPath" value="" />
+          <option name="headers">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="Accept" />
+                <option name="value" value="*/*" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="Cache-Control" />
+                <option name="value" value="no-cache" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="Accept-Charset" />
+                <option name="value" value="deflate, gzip;q=1.0, *;q=0.5" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="Accept-Language" />
+                <option name="value" value="fr-CH, fr;q=0.9, en;q=0.8, de;q=0.7, *;q=0.5" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="User-Agent" />
+                <option name="value" value="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/64.0.3282.140 Safari/537.36 Edge/18.17763" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="parametersEnabled" value="true" />
+          <option name="textToSend" value="" />
+          <option name="filesToSend" value="" />
+        </RestClientRequest>
+        <RestClientRequest>
+          <option name="httpMethod" value="GET" />
+          <option name="urlBase" value="http://www.bilibili.com" />
+          <option name="urlPath" value="" />
+          <option name="headers">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="Accept" />
+                <option name="value" value="*/*" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="Cache-Control" />
+                <option name="value" value="no-cache" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="Accept-Charset" />
+                <option name="value" value="deflate, gzip;q=1.0, *;q=0.5" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="Accept-Language" />
+                <option name="value" value="fr-CH, fr;q=0.9, en;q=0.8, de;q=0.7, *;q=0.5" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="User-Agent" />
+                <option name="value" value="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/64.0.3282.140 Safari/537.36 Edge/18.17763" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="parametersEnabled" value="true" />
+          <option name="textToSend" value="" />
+          <option name="filesToSend" value="" />
+        </RestClientRequest>
+        <RestClientRequest>
+          <option name="httpMethod" value="GET" />
+          <option name="urlBase" value="http://www.bilibili.com" />
+          <option name="urlPath" value="" />
+          <option name="headers">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="Accept" />
+                <option name="value" value="*/*" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="Cache-Control" />
+                <option name="value" value="no-cache" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="Accept-Charset" />
+                <option name="value" value="deflate, gzip;q=1.0, *;q=0.5" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="Accept-Language" />
+                <option name="value" value="fr-CH, fr;q=0.9, en;q=0.8, de;q=0.7, *;q=0.5" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="parametersEnabled" value="true" />
+          <option name="textToSend" value="" />
+          <option name="filesToSend" value="" />
+        </RestClientRequest>
+        <RestClientRequest>
+          <option name="httpMethod" value="GET" />
+          <option name="urlBase" value="http://www.baidu.com" />
+          <option name="urlPath" value="" />
+          <option name="headers">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="Accept" />
+                <option name="value" value="*/*" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="Cache-Control" />
+                <option name="value" value="no-cache" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="Accept-Charset" />
+                <option name="value" value="deflate, gzip;q=1.0, *;q=0.5" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="Accept-Language" />
+                <option name="value" value="fr-CH, fr;q=0.9, en;q=0.8, de;q=0.7, *;q=0.5" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="parametersEnabled" value="true" />
+          <option name="textToSend" value="" />
+          <option name="filesToSend" value="" />
+        </RestClientRequest>
+        <RestClientRequest>
+          <option name="httpMethod" value="GET" />
+          <option name="urlBase" value="http://www.baidu.com" />
+          <option name="urlPath" value="" />
+          <option name="headers">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="Accept" />
+                <option name="value" value="*/*" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="Cache-Control" />
+                <option name="value" value="no-cache" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="Accept-Charset" />
+                <option name="value" value="deflate, gzip;q=1.0, *;q=0.5" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="parametersEnabled" value="true" />
+          <option name="textToSend" value="" />
+          <option name="filesToSend" value="" />
+        </RestClientRequest>
+        <RestClientRequest>
+          <option name="httpMethod" value="GET" />
+          <option name="urlBase" value="http://www.baidu.com" />
+          <option name="urlPath" value="" />
+          <option name="headers">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="Accept" />
+                <option name="value" value="*/*" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="Cache-Control" />
+                <option name="value" value="no-cache" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="Accept-Charset" />
+                <option name="value" value="utf-8" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="parametersEnabled" value="true" />
+          <option name="textToSend" value="" />
+          <option name="filesToSend" value="" />
+        </RestClientRequest>
+        <RestClientRequest>
+          <option name="httpMethod" value="GET" />
+          <option name="urlBase" value="http://www.baidu.com" />
+          <option name="urlPath" value="" />
+          <option name="headers">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="Accept" />
+                <option name="value" value="*/*" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="Cache-Control" />
+                <option name="value" value="no-cache" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="parametersEnabled" value="true" />
+          <option name="textToSend" value="" />
+          <option name="filesToSend" value="" />
+        </RestClientRequest>
+      </list>
+    </option>
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -120,6 +357,37 @@
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="DubboproviderApplicationTests" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="dubboprovider" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.mydubbo.dubbo.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.mydubbo.dubbo" />
+      <option name="MAIN_CLASS_NAME" value="com.mydubbo.dubbo.DubboproviderApplicationTests" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="DubboproviderApplicationTests.contextLoads" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="dubboprovider" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.mydubbo.dubbo.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.mydubbo.dubbo" />
+      <option name="MAIN_CLASS_NAME" value="com.mydubbo.dubbo.DubboproviderApplicationTests" />
+      <option name="METHOD_NAME" value="contextLoads" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -161,6 +429,8 @@
       <list>
         <item itemvalue="Spring Boot.DubboconsumerApplication" />
         <item itemvalue="Spring Boot.DubboproviderApplication" />
+        <item itemvalue="JUnit.DubboproviderApplicationTests" />
+        <item itemvalue="JUnit.DubboproviderApplicationTests.contextLoads" />
       </list>
     </recent_temporary>
   </component>
@@ -168,12 +438,7 @@
     <option name="allServicesViewState">
       <serviceView>
         <treeState>
-          <expand>
-            <path>
-              <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
-              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@bce35c" type="7427dc5b:ServiceModel$ServiceGroupNode" />
-            </path>
-          </expand>
+          <expand />
           <select />
         </treeState>
       </serviceView>
@@ -237,12 +502,47 @@
       <workItem from="1592383442163" duration="1649000" />
       <workItem from="1592385098780" duration="468000" />
       <workItem from="1592385605907" duration="1546000" />
-      <workItem from="1592616607912" duration="3907000" />
+      <workItem from="1592616607912" duration="5515000" />
+      <workItem from="1592732161755" duration="3635000" />
+      <workItem from="1592787695459" duration="313000" />
+      <workItem from="1592789842995" duration="80000" />
+      <workItem from="1592791883550" duration="26000" />
+      <workItem from="1592807480465" duration="2924000" />
+      <workItem from="1592814031762" duration="770000" />
+      <workItem from="1592815378034" duration="367000" />
+      <workItem from="1592817436492" duration="670000" />
+      <workItem from="1592831472630" duration="3054000" />
+      <workItem from="1592873924154" duration="433000" />
+      <workItem from="1592874366401" duration="582000" />
+      <workItem from="1592874954873" duration="8024000" />
+      <workItem from="1592901242119" duration="2127000" />
+      <workItem from="1592958795206" duration="3442000" />
+      <workItem from="1592963870553" duration="2011000" />
+      <workItem from="1592965940988" duration="6724000" />
+      <workItem from="1592980016109" duration="730000" />
+      <workItem from="1592987653869" duration="2406000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="新增redis订阅发布功能" />
+    <option name="LAST_COMMIT_MESSAGE" value="新增redis订阅发布功能" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/dubbotest$Provider.ic" NAME="Provider Coverage Results" MODIFIED="1592120914639" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">

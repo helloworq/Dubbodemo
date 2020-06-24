@@ -27,11 +27,20 @@ public class getTestInfo {
     }
 
     @ResponseBody
+    @RequestMapping(value = "/getPageableInfo",method = RequestMethod.POST)
+    public List<UserInfo> getPageableInfo(
+            @RequestParam("email")String email,
+            @RequestParam("currentPage")Integer currentPage){
+        //getDatabaseMsgService.generaterData(10);
+        System.out.println("请求进入2");
+        return getDatabaseMsgService.getPageableMsgByEmail(email,currentPage);
+    }
+
+    @ResponseBody
     @RequestMapping(value = "/getmsg",method = RequestMethod.POST)
     public List<UserInfo> getmsg(@RequestParam("email")String email){
         //getDatabaseMsgService.generaterData(10);
-        System.out.println("请求进入");
+        System.out.println("请求进入3");
         return getDatabaseMsgService.getMsgByEmail(email);
     }
-
 }
