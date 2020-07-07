@@ -2,13 +2,13 @@ package com.mydubbo.dubbo.Service.impl;
 
 import com.alibaba.dubbo.config.annotation.Service;
 import com.mydubbo.dubbo.Service.RedisMessageSenderService;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.data.redis.core.StringRedisTemplate;
 import org.springframework.stereotype.Component;
 
 
 import javax.annotation.Resource;
-
 @Service
 @Component
 public class RedisMessageSenderServiceImpl implements RedisMessageSenderService {
@@ -19,9 +19,8 @@ public class RedisMessageSenderServiceImpl implements RedisMessageSenderService 
      */
     @Override
     public String sendSubMessage() throws Exception{
-        System.out.println("进入远程调用方法");
         String a="woc";
         stringRedisTemplate.convertAndSend("index","求求你调用成功");
-        return "success"+a;
+        return "success---"+a;
     }
 }

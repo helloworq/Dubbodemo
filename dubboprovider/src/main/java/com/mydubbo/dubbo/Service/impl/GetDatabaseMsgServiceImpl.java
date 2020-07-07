@@ -2,23 +2,33 @@ package com.mydubbo.dubbo.Service.impl;
 
 import com.alibaba.dubbo.config.annotation.Service;
 import com.mydubbo.dubbo.Service.GetDatabaseMsgService;
+import com.mydubbo.dubbo.Service.dao.ProductionRepositry;
 import com.mydubbo.dubbo.Service.dao.UserRepositry;
+import com.mydubbo.dubbo.Service.dao.UserRepositryOracle;
+import com.mydubbo.dubbo.bean.Production;
 import com.mydubbo.dubbo.bean.UserInfo;
+import com.mydubbo.dubbo.bean.reviewopinion;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Component;
 
+import java.util.Date;
 import java.util.List;
 
 @Service
 @Component
 public class GetDatabaseMsgServiceImpl implements GetDatabaseMsgService {
     String nameString="赵钱孙李周吴郑王冯陈褚卫";
+    String nameStringPro="SoMnIhIiuyvYTFtyFTfRDr6fGYNjo";
     Integer nameLength=4;
     int pageOffset=5;//定义分页偏移量
     @Autowired
     UserRepositry userRepositry;
+    @Autowired
+    ProductionRepositry productionRepositry;
+    @Autowired
+    UserRepositryOracle userRepositryOracle;
     @Override
     public List<UserInfo> getMsgByEmail(String Email) {
         System.out.println("进入请求1");
@@ -37,6 +47,29 @@ public class GetDatabaseMsgServiceImpl implements GetDatabaseMsgService {
         System.out.println("进入请求2");
         PageRequest pageable=PageRequest.of(currentPage,pageOffset);
         return userRepositry.findByEmail(Email,pageable);
+    }
+
+    @Override
+    public void generaterDataProduction(Integer Datarows) {
+        for (int i = 0; i < Datarows; i++) {
+            String productname="";
+            Date producttime;
+            double productprize=0;
+            for (int j = 0; j < 4; j++) {
+                char usernameCharacter= nameStringPro.toCharArray()[(int)(Math.random()*(nameStringPro.length()))];
+                productname+=usernameCharacter;
+            }
+            Production production=new Production();
+            production.setProductname(productname);
+            production.setProductprize(String.valueOf((float) Math.random()*(100)));
+            production.setProducttime(new Date().toString());
+            this.productionRepositry.save(production);
+        }
+    }
+
+    @Override
+    public reviewopinion getmsgbyid(Long id) {
+        return userRepositryOracle.getById(id);
     }
 
     @Override

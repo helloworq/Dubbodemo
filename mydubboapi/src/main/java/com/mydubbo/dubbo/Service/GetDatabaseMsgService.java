@@ -1,9 +1,11 @@
 package com.mydubbo.dubbo.Service;
 
 import com.mydubbo.dubbo.bean.UserInfo;
+import com.mydubbo.dubbo.bean.reviewopinion;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 
+import javax.persistence.criteria.CriteriaBuilder;
 import java.util.List;
 
 /**
@@ -97,4 +99,8 @@ public interface GetDatabaseMsgService {
     void generaterData(Integer Datarows);
 
     List<UserInfo> getPageableMsgByEmail(String Email, int currentPage);
+    
+    void generaterDataProduction(Integer Datarows);
+
+    reviewopinion getmsgbyid(Long id);
 }

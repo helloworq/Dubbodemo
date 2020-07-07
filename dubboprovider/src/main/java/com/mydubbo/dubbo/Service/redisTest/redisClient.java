@@ -8,6 +8,5 @@ public class redisClient {
         RedisTemplate<String,Object> redisTemplate = new RedisTemplate<>();
         redisTemplate.opsForValue().set("dasd","dasdsa");
         System.out.println(redisTemplate.opsForValue().get("dasd"));
-
     }
 }
