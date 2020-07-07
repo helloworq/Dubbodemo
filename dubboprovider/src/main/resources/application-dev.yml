@@ -1,0 +1,57 @@
+spring:
+  datasource:
+    sql-script-encoding: utf-8 # 解决中文乱码
+    first:
+      username: dgp_ars #dgpars
+      password: pass
+      url: jdbc:oracle:thin:@127.0.0.1/ORCL   # jdbc:postgresql://52.82.72.141:23123/postgres
+      driver-class-name: oracle.jdbc.driver.OracleDriver  # org.postgresql.Driver
+  jpa:
+    primary:
+      show-sql: false #true
+      generate-ddl: ture #true
+    hibernate:
+      ddl-auto: update # 数据库的操作模式
+      naming:
+        physical-strategy: org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl
+    show-sql: true # 是否在控制台打印SQL语句
+    database: oracle
+  redis:
+    database: 2 # Redis数据库索引（默认为0）,如果设置为1，那么存入的key-value都存放在select 1中
+    host: 127.0.0.1 # Redis服务器地址
+    port: 6379  # Redis服务器连接端口
+    password: # Redis服务器连接密码（默认为空）
+    pool:
+      max-active: 8 #连接池最大连接数（使用负值表示没有限制）
+      max-idle: 8 # 连接池中的最大空闲连接
+      min-idle: 0 # 连接池中的最小空闲连接
+
+server:
+  servlet:
+    context-path: /
+
+dubbo:
+  application:
+    name: user-service-provider
+    logger: log4j
+  registry:
+    address: 127.0.0.1:2181
+    protocol: zookeeper
+  protocol:
+    name: dubbo
+    port: 20881
+  monitor:
+    address: registry
+  scan:
+    base-packages: com.mydubbo.dubbo.Service
+
+  #data:
+  #  mongodb:
+  #    second:
+  #      enabled: true # 是否开启第二数据源
+  #      host: 127.0.0.1 #52.82.72.141
+  #      port: 27017 #28018
+  #      authentication-database: admin # 需要上授权的数据库，不然连接不上
+  #      database: dist #distdoc
+  #      username: user #distdoc
+  #      password: pass #dist2019
