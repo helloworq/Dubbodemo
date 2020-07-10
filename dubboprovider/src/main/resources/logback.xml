@@ -21,7 +21,7 @@
         </triggeringPolicy>
     </appender>
 
-    <root level="WARN"><!--控制输出到控制台以及写入文件的日志级别-->
+    <root level="INFO"><!--控制输出到控制台以及写入文件的日志级别-->
         <appender-ref ref="CONSOLE" />
         <appender-ref ref="FILE" />
     </root>
