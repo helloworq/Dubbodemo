@@ -8,11 +8,11 @@ import com.mydubbo.dubbo.Service.util.CacheWeatherData;
 import com.mydubbo.dubbo.Service.util.GetWeatherData;
 import com.mydubbo.dubbo.bean.CityWeather;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Component;
 
+import java.util.ArrayList;
 import java.util.List;
 
 @Service
@@ -29,6 +29,11 @@ public class WeatherServiceImpl implements WeatherService {
     @Override
     public String getCityCode(String cityName) {
         return cityInfoRepositry.findcityCode(cityName);
+    }
+
+    @Override
+    public ArrayList<String> getAllCityCode() {
+        return cityInfoRepositry.findallcityCode();
     }
 
     @Override

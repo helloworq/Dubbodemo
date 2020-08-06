@@ -1,0 +1,17 @@
+server:
+  port: 8080
+dubbo:
+  application:
+    name: boot-consumer
+    timeout: 300001
+  registry: {address: 'zookeeper://127.0.0.1:2181', check: false}
+  monitor: {protocol: registry}
+  consumer: {timeout: 30000}
+spring:
+  application: {name: openfeign-server}
+msg:
+  user:
+    id: 7774
+    age: 10
+    arr: [1, 2, 3, 4, 5, 6]
+    arrlist: [1, 2, 3, 4, 5]

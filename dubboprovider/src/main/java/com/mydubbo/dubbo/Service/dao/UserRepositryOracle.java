@@ -10,5 +10,5 @@ import java.util.List;
 
 @RepositoryDefinition(domainClass = reviewopinion.class, idClass = String.class)
 public interface UserRepositryOracle extends JpaRepository<reviewopinion,String> {
-    reviewopinion getById(Long ID);
+    reviewopinion findById(Long id);
 }

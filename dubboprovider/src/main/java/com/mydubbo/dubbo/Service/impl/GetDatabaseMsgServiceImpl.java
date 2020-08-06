@@ -69,7 +69,7 @@ public class GetDatabaseMsgServiceImpl implements GetDatabaseMsgService {
 
     @Override
     public reviewopinion getmsgbyid(Long id) {
-        return userRepositryOracle.getById(id);
+        return userRepositryOracle.findById(id);
     }
 
     @Override

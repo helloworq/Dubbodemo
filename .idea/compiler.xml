@@ -7,8 +7,8 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="mydubboapi" />
         <module name="dubboconsumer" />
+        <module name="mydubboapi" />
         <module name="dubboprovider" />
       </profile>
     </annotationProcessing>
@@ -21,6 +21,7 @@
       <module name="dubboconsumer" target="1.8" />
       <module name="dubboprovider" target="1.8" />
       <module name="mydubboapi" target="1.8" />
+      <module name="openfeignclient" target="1.8" />
     </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
@@ -33,6 +34,7 @@
       <module name="dubboconsumer" options="-parameters" />
       <module name="dubboprovider" options="-parameters" />
       <module name="mydubboapi" options="-parameters" />
+      <module name="openfeignclient" options="-parameters" />
     </option>
   </component>
 </project>

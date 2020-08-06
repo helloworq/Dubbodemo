@@ -24,6 +24,7 @@ public class SendMessage {
     @ResponseBody
     @RequestMapping("/sendMsg")
     public String sendSubMessage() throws Exception {
+
         log.warn("============开始远程调用================");
         System.out.println("开始远程调用");
         return redisMessageSenderService.sendSubMessage();

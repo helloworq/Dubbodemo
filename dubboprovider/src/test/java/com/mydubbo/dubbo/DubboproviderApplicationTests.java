@@ -18,10 +18,13 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.data.redis.core.RedisTemplate;
+import org.springframework.data.redis.serializer.StringRedisSerializer;
 
 import javax.annotation.Resource;
 import java.util.ArrayList;
-import java.util.List;
+import java.util.HashSet;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 @Slf4j
 @SpringBootTest
@@ -36,8 +39,55 @@ class DubboproviderApplicationTests{
 
     @Test
     void contextLoads() throws InterruptedException {
+        /**
+         * redis字符串操作
+         */
+
         //redisTemplate.opsForValue().set("dasd","dasdsa");
-        //System.out.println(redisTemplate.opsForValue().get("dasd"));
+        //redisTemplate.opsForValue().set("dsad","d",1);
+        //System.out.println(redisTemplate.opsForValue().get("dsad"));
+        //ArrayList<String> list=new ArrayList<>();
+        //list.add("wdad");list.add("dsadasd");list.add("dsadasd");list.add("dsadasd");list.add("dsadasd");
+        //redisTemplate.opsForList().leftPush("list",list);
+
+        for (int i = 0; i < 10; i++) {
+            long start=System.currentTimeMillis();
+            String targetHTML=GetUrlMessage.getMessage("https://www.zhihu.com/question/287084175/answer/454611495");
+            //System.out.println(redisTemplate.opsForList().leftPop("list"));
+            String patt="(https?|ftp|file)://[-A-Za-z0-9+&@#/%?=~_|!:,.;]+[-A-Za-z0-9+&@#/%=~_|]";
+            Pattern pattern=Pattern.compile(patt);
+            Matcher matcher=pattern.matcher(targetHTML);
+            while (matcher.find()) {
+                redisTemplate.opsForSet().add("targetUrl",matcher.group());
+            }
+            //System.out.println(redisTemplate.opsForSet().members("targetUrl"));
+            System.out.println("redis操作时间："+(System.currentTimeMillis()-start));
+            Thread.sleep(1000);
+        }
+
+        for (int i = 0; i < 10; i++) {
+            long start=System.currentTimeMillis();
+            String targetHTML=GetUrlMessage.getMessage("https://www.zhihu.com/question/287084175/answer/454611495");
+            //System.out.println(redisTemplate.opsForList().leftPop("list"));
+            String patt="(https?|ftp|file)://[-A-Za-z0-9+&@#/%?=~_|!:,.;]+[-A-Za-z0-9+&@#/%=~_|]";
+            Pattern pattern=Pattern.compile(patt);
+            Matcher matcher=pattern.matcher(targetHTML);
+            HashSet<String> hashSet=new HashSet<>();
+            while (matcher.find()) {
+                //redisTemplate.opsForSet().add("targetUrl",matcher.group());
+                hashSet.add(matcher.group());
+            }
+            //System.out.println(redisTemplate.opsForSet().members("targetUrl"));
+            System.out.println("hashset操作时间："+(System.currentTimeMillis()-start));
+            Thread.sleep(1000);
+        }
+
+
+
+
+
+
+
         //读取文件获取城市代码的方式太慢了，所以将数据存入数据库里
         /**
          * 获取到的json数据有三个部分，需要分别获取
@@ -51,6 +101,7 @@ class DubboproviderApplicationTests{
             }
              */
             //测试通过接口获取数据的情况
+        /*
         System.out.println(cityInfoRepositry.findTop100(PageRequest.of(0,100)).size());
         List<String> list=cityInfoRepositry.findTop100(PageRequest.of(0,100));
         //Array place=JSON.toJSONString(list);
@@ -107,5 +158,7 @@ class DubboproviderApplicationTests{
             System.out.println("等待1秒开始下一轮数据获取");
             Thread.sleep(1000);
         }
+
+         */
     }
 }

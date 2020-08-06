@@ -8,6 +8,7 @@ class DubboconsumerApplicationTests {
 
     @Test
     void contextLoads() {
+
     }
 
 }

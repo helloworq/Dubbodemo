@@ -2,8 +2,6 @@ package com.mydubbo.dubbo.Service.impl;
 
 import com.alibaba.dubbo.config.annotation.Service;
 import com.mydubbo.dubbo.Service.RedisMessageSenderService;
-import lombok.extern.slf4j.Slf4j;
-import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.data.redis.core.StringRedisTemplate;
 import org.springframework.stereotype.Component;
 
