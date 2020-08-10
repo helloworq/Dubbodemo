@@ -29,7 +29,7 @@ public class UserController {
     UserContainer userContainer;
     @Autowired
     ContextRefresher contextRefresher;
-    @GetMapping("getYmlInfo")
+    @GetMapping("getYmlInfoPrev")
     public HashMap<String,Object> getYmlInfo(
             @RequestParam(value = "ymlFilename",required = false) String ymlFilename
     ) throws IOException {
@@ -47,21 +47,11 @@ public class UserController {
         //获取resources目录下所有后缀为yml的文件名,例如(application.yml)
         ResourcePatternResolver resolver = new PathMatchingResourcePatternResolver();
         Resource[] resources = resolver.getResources("classpath:*.yml");
-        //=======================测试输出全部模块名=================================
-        String path=Arrays.stream(resources).findFirst().get().getURL().toString().substring(6);
-        String filepath=path.substring(0,path.indexOf("dubbotest"));
-        List list = new ArrayList();
-        try {
-            File file = new File(filepath);
-            String[] filelist = file.list();
-            for (int i = 0; i < filelist.length; i++) {
-                list.add(filepath+"\\"+filelist[i]);
-            }
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-        list.stream().forEach(System.out::println);
-        //=======================测试输出全部模块名=================================
+
+        //获取文件完整路径Arrays.stream(resources).findFirst().get().getURL();
+        //获取文件路径，相比于上面那个少了自身名字以及file: ClassUtils.getDefaultClassLoader().getResource("").getPath();
+
+
         List<String> ymlFilenameListPath=new ArrayList<>();
         for (Resource resource:resources) {
             //返回yml文件的相对地址
@@ -74,7 +64,6 @@ public class UserController {
         for (Resource resource:resources) {
             String ymlFilenameprev= resource.getFilename();
             Resource ymlResource =new ClassPathResource(ymlFilenameprev);
-            //hashMap.put("path12",ymlResource.getURL());
             //非空判断
             if (null!=yaml.load(ymlResource.getInputStream())&&ymlFilename.equals(ymlFilenameprev)) {
                 System.out.println(ymlFilename+"--"+ymlFilenameprev+"--"+yaml.load(ymlResource.getInputStream()));
@@ -82,6 +71,8 @@ public class UserController {
             }
         }
         hashMap.put("msg","修改信息已提交");
+        //需求变更，需要单独返回模块名和文件名
+
         return hashMap;
     }
 
@@ -99,7 +90,6 @@ public class UserController {
             @RequestParam(value = "ymlFilename") String ymlFilename) throws IOException {
         System.out.println("开始处理");
         HashMap<String,String> hashMap=new HashMap<>();
-        Yaml yaml = new Yaml();
         //获取resources目录下所有后缀为yml的文件名,例如(application.yml)
         ResourcePatternResolver resolver = new PathMatchingResourcePatternResolver();
         Resource[] resources = resolver.getResources("classpath:*.yml");
@@ -110,7 +100,7 @@ public class UserController {
         System.out.println(filePathOrigin.substring(startPosition+1,endPosition));
         File file=new File(filePathOrigin.substring(startPosition+1,endPosition)+ymlFilename.substring(ymlFilename.indexOf("application")));
         FileWriter fileWriter = new FileWriter(file);
-        //将传入的数据以json格式dump进yml
+        //将传入的数据以json格式写进yml
         fileWriter.write(ymlInfoAfterChangingContent.trim());
         fileWriter.flush();
         fileWriter.close();

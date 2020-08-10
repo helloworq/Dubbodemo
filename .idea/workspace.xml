@@ -2,11 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8cdb1f51-2fa5-49f1-aa4c-bd577cc21659" name="Default Changelist" comment="添加oracle数据源，添加日志功能，准备测试天气接口">
+      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/dubboconsumer/src/main/java/com/mydubbo/dubbo/Controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/dubboconsumer/src/main/java/com/mydubbo/dubbo/Controller/UserController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dubboconsumer/src/main/java/com/mydubbo/dubbo/prev/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/dubboconsumer/src/main/java/com/mydubbo/dubbo/prev/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dubboconsumer/src/main/resources/application-dev.yml" beforeDir="false" afterPath="$PROJECT_DIR$/dubboconsumer/src/main/resources/application-dev.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dubboconsumer/src/main/resources/static/showjson.html" beforeDir="false" afterPath="$PROJECT_DIR$/dubboconsumer/src/main/resources/static/showjson.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dubboconsumer/src/main/resources/application.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dubboconsumer/src/main/resources/static/beautyJson.html" beforeDir="false" afterPath="$PROJECT_DIR$/dubboconsumer/src/main/resources/static/beautyJson.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/log/consumer.log" beforeDir="false" afterPath="$PROJECT_DIR$/log/consumer.log" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -53,8 +53,8 @@
       <list>
         <option value="spring-beans.schema" />
         <option value="Interface" />
-        <option value="Class" />
         <option value="HTML File" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -707,7 +707,9 @@
       <workItem from="1596854400931" duration="1749000" />
       <workItem from="1596962147637" duration="3243000" />
       <workItem from="1597022017727" duration="1228000" />
-      <workItem from="1597025777529" duration="10371000" />
+      <workItem from="1597025777529" duration="23446000" />
+      <workItem from="1597061625485" duration="1654000" />
+      <workItem from="1597065302481" duration="10334000" />
     </task>
     <task id="LOCAL-00001" summary="添加oracle数据源，添加日志功能，准备测试天气接口">
       <created>1594087718101</created>
