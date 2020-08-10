@@ -2,64 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8cdb1f51-2fa5-49f1-aa4c-bd577cc21659" name="Default Changelist" comment="添加oracle数据源，添加日志功能，准备测试天气接口">
-      <change afterPath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_code_findbugs_jsr305_3_0_1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_netflix_archaius_archaius_core_0_7_6.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_netflix_hystrix_hystrix_core_1_5_12.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__commons_configuration_commons_configuration_1_8.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__commons_lang_commons_lang_2_6.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_github_openfeign_feign_core_9_5_1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_github_openfeign_feign_hystrix_9_5_1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_github_openfeign_feign_slf4j_9_5_1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_micrometer_micrometer_core_1_5_1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_reactivex_rxjava_1_3_8.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_curator_curator_client_4_0_1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_curator_curator_framework_4_0_1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_attoparser_attoparser_2_0_5_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_bouncycastle_bcpkix_jdk15on_1_56.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_bouncycastle_bcprov_jdk15on_1_56.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_hdrhistogram_HdrHistogram_2_1_12.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_latencyutils_LatencyUtils_2_0_3.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_actuator_2_3_1_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_actuator_autoconfigure_2_3_1_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_configuration_processor_2_3_1_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_actuator_2_3_1_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_cache_2_3_1_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_thymeleaf_2_3_1_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_cloud_spring_cloud_commons_2_0_0_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_cloud_spring_cloud_context_2_0_0_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_cloud_spring_cloud_netflix_archaius_2_0_0_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_cloud_spring_cloud_netflix_ribbon_2_0_0_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_cloud_spring_cloud_openfeign_core_2_0_0_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_cloud_spring_cloud_starter_2_0_0_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_cloud_spring_cloud_starter_openfeign_2_2_3_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_security_spring_security_crypto_5_3_3_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_security_spring_security_rsa_1_0_5_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_thymeleaf_extras_thymeleaf_extras_java8time_3_0_4_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_thymeleaf_thymeleaf_3_0_11_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_thymeleaf_thymeleaf_spring5_3_0_11_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_unbescape_unbescape_1_1_6_RELEASE.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dubboconsumer/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/dubboconsumer/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dubboconsumer/src/main/java/com/mydubbo/dubbo/Controller/OrderController.java" beforeDir="false" afterPath="$PROJECT_DIR$/dubboconsumer/src/main/java/com/mydubbo/dubbo/prev/OrderController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dubboconsumer/src/main/java/com/mydubbo/dubbo/Controller/SendMessage.java" beforeDir="false" afterPath="$PROJECT_DIR$/dubboconsumer/src/main/java/com/mydubbo/dubbo/Controller/SendMessage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dubboconsumer/src/main/java/com/mydubbo/dubbo/Controller/getTestInfo.java" beforeDir="false" afterPath="$PROJECT_DIR$/dubboconsumer/src/main/java/com/mydubbo/dubbo/prev/getTestInfo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dubboconsumer/src/main/java/com/mydubbo/dubbo/DubboconsumerApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/dubboconsumer/src/main/java/com/mydubbo/dubbo/DubboconsumerApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dubboconsumer/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/dubboconsumer/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dubboconsumer/src/test/java/com/mydubbo/dubbo/DubboconsumerApplicationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/dubboconsumer/src/test/java/com/mydubbo/dubbo/DubboconsumerApplicationTests.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dubboprovider/log/provider.log" beforeDir="false" afterPath="$PROJECT_DIR$/dubboprovider/log/provider.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dubboprovider/src/main/java/com/mydubbo/dubbo/DubboproviderApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/dubboprovider/src/main/java/com/mydubbo/dubbo/DubboproviderApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dubboprovider/src/main/java/com/mydubbo/dubbo/Service/dao/CityInfoRepositry.java" beforeDir="false" afterPath="$PROJECT_DIR$/dubboprovider/src/main/java/com/mydubbo/dubbo/Service/dao/CityInfoRepositry.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dubboprovider/src/main/java/com/mydubbo/dubbo/Service/dao/UserRepositryOracle.java" beforeDir="false" afterPath="$PROJECT_DIR$/dubboprovider/src/main/java/com/mydubbo/dubbo/Service/dao/UserRepositryOracle.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dubboprovider/src/main/java/com/mydubbo/dubbo/Service/impl/GetDatabaseMsgServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/dubboprovider/src/main/java/com/mydubbo/dubbo/Service/impl/GetDatabaseMsgServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dubboprovider/src/main/java/com/mydubbo/dubbo/Service/impl/RedisMessageSenderServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/dubboprovider/src/main/java/com/mydubbo/dubbo/Service/impl/RedisMessageSenderServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dubboprovider/src/main/java/com/mydubbo/dubbo/Service/impl/WeatherServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/dubboprovider/src/main/java/com/mydubbo/dubbo/Service/impl/WeatherServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dubboprovider/src/test/java/com/mydubbo/dubbo/DubboproviderApplicationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/dubboprovider/src/test/java/com/mydubbo/dubbo/DubboproviderApplicationTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dubboconsumer/src/main/java/com/mydubbo/dubbo/Controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/dubboconsumer/src/main/java/com/mydubbo/dubbo/Controller/UserController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dubboconsumer/src/main/java/com/mydubbo/dubbo/prev/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/dubboconsumer/src/main/java/com/mydubbo/dubbo/prev/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dubboconsumer/src/main/resources/application-dev.yml" beforeDir="false" afterPath="$PROJECT_DIR$/dubboconsumer/src/main/resources/application-dev.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dubboconsumer/src/main/resources/static/showjson.html" beforeDir="false" afterPath="$PROJECT_DIR$/dubboconsumer/src/main/resources/static/showjson.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/log/consumer.log" beforeDir="false" afterPath="$PROJECT_DIR$/log/consumer.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/log/provider.log" beforeDir="false" afterPath="$PROJECT_DIR$/log/provider.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mydubboapi/src/main/java/com/mydubbo/dubbo/Service/WeatherService.java" beforeDir="false" afterPath="$PROJECT_DIR$/mydubboapi/src/main/java/com/mydubbo/dubbo/Service/WeatherService.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -106,6 +54,7 @@
         <option value="spring-beans.schema" />
         <option value="Interface" />
         <option value="Class" />
+        <option value="HTML File" />
       </list>
     </option>
   </component>
@@ -132,6 +81,7 @@
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="PropertiesComponent">
     <property name="DatabaseDriversLRU" value="mysql&#10;oracle" />
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="RequestMappingsPanelOrder0" value="0" />
     <property name="RequestMappingsPanelOrder1" value="1" />
     <property name="RequestMappingsPanelWidth0" value="75" />
@@ -170,6 +120,13 @@
   <component name="RestClientSettings">
     <option name="REQUEST_HISTORY">
       <list>
+        <RestClientRequest>
+          <option name="httpMethod" value="GET" />
+          <option name="urlBase" value="http://localhost:8080/getYmlInfo" />
+          <option name="urlPath" value="" />
+          <option name="textToSend" value="" />
+          <option name="filesToSend" value="" />
+        </RestClientRequest>
         <RestClientRequest>
           <option name="httpMethod" value="GET" />
           <option name="urlBase" value="http://localhost:8081" />
@@ -502,6 +459,9 @@
     </option>
   </component>
   <component name="RunManager" selected="Spring Boot.DubboconsumerApplication">
+    <configuration name="DubboconsumerApplication#1" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" path="$APPLICATION_CONFIG_DIR$/scratches/DubboconsumerApplication.http">
+      <method v="2" />
+    </configuration>
     <configuration name="DubboconsumerApplicationTests.contextLoads" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="dubboconsumer" />
       <extension name="coverage">
@@ -514,21 +474,6 @@
       <option name="MAIN_CLASS_NAME" value="com.mydubbo.dubbo.DubboconsumerApplicationTests" />
       <option name="METHOD_NAME" value="contextLoads" />
       <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="DubboproviderApplicationTests" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="dubboprovider" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.mydubbo.dubbo.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.mydubbo.dubbo" />
-      <option name="MAIN_CLASS_NAME" value="com.mydubbo.dubbo.DubboproviderApplicationTests" />
-      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -583,8 +528,8 @@
       </method>
     </configuration>
     <list>
+      <item itemvalue="HTTP Request.DubboconsumerApplication#1" />
       <item itemvalue="JUnit.DubboconsumerApplicationTests.contextLoads" />
-      <item itemvalue="JUnit.DubboproviderApplicationTests" />
       <item itemvalue="JUnit.DubboproviderApplicationTests.contextLoads" />
       <item itemvalue="Spring Boot.MydubboapiApplication" />
       <item itemvalue="Spring Boot.DubboconsumerApplication" />
@@ -593,10 +538,10 @@
     <recent_temporary>
       <list>
         <item itemvalue="Spring Boot.DubboconsumerApplication" />
+        <item itemvalue="HTTP Request.DubboconsumerApplication#1" />
         <item itemvalue="Spring Boot.DubboproviderApplication" />
         <item itemvalue="JUnit.DubboconsumerApplicationTests.contextLoads" />
         <item itemvalue="JUnit.DubboproviderApplicationTests.contextLoads" />
-        <item itemvalue="JUnit.DubboproviderApplicationTests" />
       </list>
     </recent_temporary>
   </component>
@@ -757,7 +702,12 @@
       <workItem from="1596545765125" duration="14566000" />
       <workItem from="1596603290262" duration="16415000" />
       <workItem from="1596638440846" duration="3774000" />
-      <workItem from="1596674515733" duration="24998000" />
+      <workItem from="1596674515733" duration="27260000" />
+      <workItem from="1596762345159" duration="16134000" />
+      <workItem from="1596854400931" duration="1749000" />
+      <workItem from="1596962147637" duration="3243000" />
+      <workItem from="1597022017727" duration="1228000" />
+      <workItem from="1597025777529" duration="10371000" />
     </task>
     <task id="LOCAL-00001" summary="添加oracle数据源，添加日志功能，准备测试天气接口">
       <created>1594087718101</created>

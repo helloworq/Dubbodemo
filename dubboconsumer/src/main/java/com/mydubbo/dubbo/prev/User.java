@@ -11,12 +11,12 @@ import java.util.List;
 
 @Data
 public class User {
-    /*public ArrayList<HashMap<String,User>> arrHashUser;
+    public ArrayList<HashMap<String,User>> arrHashUser;
     public ArrayList<HashMap<String,String>> arrHash;
     public ArrayList<String> arrlist;
     public HashMap<String,String> haMap;
     public int[] arr;
-    public List<User> list;*/
+    public List<User> list;
     public int id;
     public String age;
 }

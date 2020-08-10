@@ -47,6 +47,21 @@ public class UserController {
         //获取resources目录下所有后缀为yml的文件名,例如(application.yml)
         ResourcePatternResolver resolver = new PathMatchingResourcePatternResolver();
         Resource[] resources = resolver.getResources("classpath:*.yml");
+        //=======================测试输出全部模块名=================================
+        String path=Arrays.stream(resources).findFirst().get().getURL().toString().substring(6);
+        String filepath=path.substring(0,path.indexOf("dubbotest"));
+        List list = new ArrayList();
+        try {
+            File file = new File(filepath);
+            String[] filelist = file.list();
+            for (int i = 0; i < filelist.length; i++) {
+                list.add(filepath+"\\"+filelist[i]);
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        list.stream().forEach(System.out::println);
+        //=======================测试输出全部模块名=================================
         List<String> ymlFilenameListPath=new ArrayList<>();
         for (Resource resource:resources) {
             //返回yml文件的相对地址
@@ -74,7 +89,7 @@ public class UserController {
     /**
      * 修改信息有两种情况，第一种是修改classes目录下的文件这种情况不会
      * @param ymlInfoAfterChangingContent   前端传入修改后的json数据
-     * @param ymlFilename                   前端传入需修改的文件名
+     * @param ymlFilename                   前端传入需修改的文件名(需要带.yml后缀)
      * @return
      * @throws IOException
      */
@@ -95,7 +110,8 @@ public class UserController {
         System.out.println(filePathOrigin.substring(startPosition+1,endPosition));
         File file=new File(filePathOrigin.substring(startPosition+1,endPosition)+ymlFilename.substring(ymlFilename.indexOf("application")));
         FileWriter fileWriter = new FileWriter(file);
-        fileWriter.write(yaml.dump(JSONObject.parse(ymlInfoAfterChangingContent)));
+        //将传入的数据以json格式dump进yml
+        fileWriter.write(ymlInfoAfterChangingContent.trim());
         fileWriter.flush();
         fileWriter.close();
         hashMap.put("msg","success");
