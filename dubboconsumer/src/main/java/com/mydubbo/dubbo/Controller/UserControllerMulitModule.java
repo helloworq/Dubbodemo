@@ -52,9 +52,6 @@ public class UserControllerMulitModule {
         HashMap<String,Object> hashMap=new HashMap<>();
         //获取完整路径，供参数拼接,originpath典型样例:
         //file:/C:/Users/12733/Desktop/dubbo学习记录/dubbotest/dubboconsumer/target/classes/application-dev.yml
-        ResourcePatternResolver resolver = new PathMatchingResourcePatternResolver();
-        Resource[] resources = resolver.getResources("classpath:*.yml");
-        String originPath=Arrays.stream(resources).findFirst().get().getURL().toString();
         //根据参数拼接目标路径
         String filePath=pathPrefix+modulename+"/target/classes/"+ymlFilename;
         File file=new File(filePath);
@@ -139,24 +136,20 @@ public class UserControllerMulitModule {
      * 修改信息有两种情况，第一种是修改classes目录下的文件这种情况不会
      * @param ymlInfoAfterChangingContent   前端传入修改后的json数据
      * @param ymlFilename                   前端传入需修改的文件名(需要带.yml后缀)
+     * @param modulename                    前端传入模块名
      * @return
      * @throws IOException
      */
     @PostMapping("setYmlInfo1")
     public HashMap<String,String> setYmlInfo(
             @RequestParam(value = "ymlInfoAfterChangingContent") String ymlInfoAfterChangingContent,//使用@Requestbody接收json数据
-            @RequestParam(value = "ymlFilename") String ymlFilename) throws IOException {
+            @RequestParam(value = "ymlFilename") String ymlFilename,
+            @RequestParam(value = "modulename") String modulename) throws IOException {
         System.out.println("开始处理");
         HashMap<String,String> hashMap=new HashMap<>();
-        //获取resources目录下所有后缀为yml的文件名,例如(application.yml)
-        ResourcePatternResolver resolver = new PathMatchingResourcePatternResolver();
-        Resource[] resources = resolver.getResources("classpath:*.yml");
-        String filePathOrigin=String.valueOf(Arrays.stream(resources).findFirst().get().getURL());
-        Integer startPosition=filePathOrigin.indexOf("/");
-        Integer endPosition=filePathOrigin.indexOf("application");
-        //System.out.println(filePathOrigin.substring(startPosition+1,endPosition)+ymlFilename);
-        System.out.println(filePathOrigin.substring(startPosition+1,endPosition));
-        File file=new File(filePathOrigin.substring(startPosition+1,endPosition)+ymlFilename.substring(ymlFilename.indexOf("application")));
+        //根据参数拼接目标路径
+        String filePath=pathPrefix+modulename+"/target/classes/"+ymlFilename;
+        File file=new File(filePath);
         FileWriter fileWriter = new FileWriter(file);
         //将传入的数据以json格式写进yml
         fileWriter.write(ymlInfoAfterChangingContent.trim());

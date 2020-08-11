@@ -104,16 +104,18 @@
     }
 
     var currentBtn;
+    var currentBtnId;
     function submitFix() {
         var msgp=$("#prehtml").text()
         if (!isJSON(msgp)){
             $.ajax({
                 ansyc: false,//是否异步发送
                 type: "POST",
-                url: "/setYmlInfo",
+                url: "/setYmlInfo1",
                 data: {
                     "ymlInfoAfterChangingContent" : msgp,
-                    "ymlFilename"     : currentBtn
+                    "ymlFilename"     : currentBtn,
+                    "modulename"      : $("#h"+((Number)(currentBtnId.substring(2)))).text()
                 },
                 dataType: "json",
                 success: function (data) {
@@ -129,18 +131,17 @@
     }
     function btClickChangeYmlContent(event){
         var text=event.innerText.trim()
-        var btId=event.id
         currentBtn=text;
+        currentBtnId=event.id
         var sendText=text.substring(text.indexOf("application")).trim()
-        alert($("#h"+((Number)(btId.substring(2)))).text())
-        //alert($("#h"+(((Number)(btId.substring(2))-1)).text())
+        alert($("#h"+((Number)(currentBtnId.substring(2)))).text())
         $.ajax({
             ansyc: false,//是否异步发送
             type: "GET",
             url: "/getYmlInfo",
             data: {
                 "ymlFilename"     : sendText,
-                "modulename"      : $("#h"+((Number)(btId.substring(2)))).text()
+                "modulename"      : $("#h"+((Number)(currentBtnId.substring(2)))).text()
             },
             dataType: "json",
             success: function (data) {
