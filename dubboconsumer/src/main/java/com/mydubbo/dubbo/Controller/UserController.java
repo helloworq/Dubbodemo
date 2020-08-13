@@ -84,7 +84,7 @@ public class UserController {
      * @return
      * @throws IOException
      */
-    @PostMapping("setYmlInfo")
+    @PostMapping("setYmlInfo1")
     public HashMap<String,String> setYmlInfo(
             @RequestParam(value = "ymlInfoAfterChangingContent") String ymlInfoAfterChangingContent,//使用@Requestbody接收json数据
             @RequestParam(value = "ymlFilename") String ymlFilename) throws IOException {
@@ -111,7 +111,8 @@ public class UserController {
         return hashMap;
     }
 
-    /*@GetMapping("usertest")
+    /*
+    @GetMapping("usertest")
     public HashMap<String,Object> usertest() throws IOException {
         User user=userContainer.getUser();
         System.out.println(user.getAge());
@@ -132,8 +133,9 @@ public class UserController {
         System.out.println(totalInfo);
         System.out.println(totalInfo.toString());
         return hashMap;
-    }*/
+    }
 
+     */
     /**
      * 显示信息
      * @return

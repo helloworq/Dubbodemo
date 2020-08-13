@@ -61,13 +61,13 @@
             <button id="bt9" onclick="json2yml()">json转yml</button>
         </li>
         <li style="text-align: center;margin-top: 20px;">
-            <button id="bt10" onclick="btClickChangeYmlContent(this)">未定义操作</button>
+            <button id="bt10" onclick="yml2json()">yml转json</button>
         </li>
         <li style="text-align: center;margin-top: 20px;">
             <button id="bt11" onclick="btClickChangeYmlContent(this)">未定义操作</button>
         </li>
         <li style="text-align: center;margin-top: 20px;">
-            <button id="bt12" onclick="btClickChangeYmlContent(this)">未定义操作</button>
+            <button id="bt12" onclick="btClickChangeYmlContent(this)">注意事项</button>
         </li>
     </ul>
 </div>
@@ -106,16 +106,16 @@
     var currentBtn;
     var currentBtnId;
     function submitFix() {
-        var msgp=$("#prehtml").text()
-        if (!isJSON(msgp)){
+        //禁止提交json数据
+        if (!isJSON($("#prehtml").text())){
             $.ajax({
                 ansyc: false,//是否异步发送
                 type: "POST",
-                url: "/setYmlInfo1",
+                url: "/setYmlInfo",
                 data: {
-                    "ymlInfoAfterChangingContent" : msgp,
-                    "ymlFilename"     : currentBtn,
-                    "modulename"      : $("#h"+((Number)(currentBtnId.substring(2)))).text()
+                    "ymlInfoAfterChangingContent" : $("#prehtml").text(),
+                    "ymlFilename"                 : currentBtn,
+                    "modulename"                  : $("#h"+((Number)(currentBtnId.substring(2)))).text()
                 },
                 dataType: "json",
                 success: function (data) {
@@ -134,7 +134,6 @@
         currentBtn=text;
         currentBtnId=event.id
         var sendText=text.substring(text.indexOf("application")).trim()
-        alert($("#h"+((Number)(currentBtnId.substring(2)))).text())
         $.ajax({
             ansyc: false,//是否异步发送
             type: "GET",
@@ -146,20 +145,16 @@
             dataType: "json",
             success: function (data) {
                 if (sendText=="application.yml") {
-                    alert(data['application'])
-                    formatBeautyJson(data['application'])
+                    json2ymloverride(data['application'])
                 }
                 else if (sendText=="application-dev.yml") {
-                    alert(data['application-dev'])
-                    formatBeautyJson(data['application-dev'])
+                    json2ymloverride(data['application-dev'])
                 }
                 else if (sendText=="application-prod.yml") {
-                    alert(data['application-prod'])
-                    formatBeautyJson(data['application-prod'])
+                    json2ymloverride(data['application-prod'])
                 }
                 else if (sendText=="application-test.yml") {
-                    alert(data['application-test'])
-                    formatBeautyJson(data['application-test'])
+                    json2ymloverride(data['application-test'])
                 }
             },
             error: function (data) {
@@ -193,32 +188,7 @@
             }
         })
     }
-    /*window.onload=function (){
-        $.ajax({
-            ansyc: false,//是否异步发送
-            type: "GET",
-            url: "/getYmlInfo",
-            data: {
-                "ymlFilename"     : "application.yml"
-            },
-            dataType: "json",
-            success: function (data) {
-                //获取返回数据的数量
-                var pathLength=data.ymlFilenamePath.length
-                //根据返回的数量给button赋值，这样就不用写死了
-                //需求更改,需要分别返回模块名和文件名,并且需要根据返回的json数据量动态生成html，避免无效数据显示
-                //返回模块名
-                $("#h1").text(data.ymlFilenamePath[0].split("/")[data.ymlFilenamePath[0].split("/").length-2])
-                for (var i = 0; i < pathLength; i++) {
-                    //返回文件名
-                    $("#bt"+(i+1)).text(data.ymlFilenamePath[i].substring(data.ymlFilenamePath[i].indexOf("application")))
-                }
-            },
-            error: function (data) {
-                alert("错误")
-            }
-        })
-    }*/
+
     //检查json数据是否合法
     function isJSON(str) {
         if (typeof str == 'string') {
@@ -236,15 +206,31 @@
         }
         console.log('It is not a string!')
     }
+    //json转yml
+    function json2ymloverride(jsontext) {
+        $("#prehtml").html(hljs.highlight("yaml", jsyaml.dump(jsontext)).value)
+    }
+    //json转yml
+    function json2yml() {
+        let json = $("#prehtml").text()
+        if (json) {
+            try {
+                let jsonObj = JSON.parse(json);
+                $("#prehtml").html(hljs.highlight("yaml", jsyaml.dump(jsonObj)).value)
+            } catch (e) {
+                alert(e)
+            }
+        }
+    }
 
     //json转yml
-    function json2yml(){
-        let json=$("#prehtml").text()
-        if(json){
-            try{
-                let jsonObj=JSON.parse(json);
-                $("#prehtml").html(hljs.highlight("yaml",jsyaml.dump(jsonObj)).value)
-            } catch(e) {
+    function yml2json() {
+        let yaml = $("#prehtml").text()
+        if (yaml) {
+            try {
+                let json = JSON.stringify(jsyaml.load(yaml), null, 2);
+                $("#prehtml").html(hljs.highlight("json", json).value)
+            } catch (e) {
                 alert(e)
             }
         }
